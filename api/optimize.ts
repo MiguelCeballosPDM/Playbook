@@ -52,7 +52,7 @@ Output JSON format:
 }
 `;
 
-export default async function handler(request, response) {
+export default async function handler(request: any, response: any) {
   // 1. Verificación de Seguridad
   if (!process.env.API_KEY) {
     return response.status(500).json({ error: "Server Configuration Error: API Key missing." });
